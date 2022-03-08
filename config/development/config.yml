@@ -1,0 +1,83 @@
+baseURL: 'https://ludi.sh/development'
+languageCode: 'en-us'
+title: 'Ludi (Development)'
+theme: 'PaperMod'
+paginate: 5
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+minify:
+  disableXML: true
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON
+params:
+    env: production
+    description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+    author: Theme PaperMod
+    defaultTheme: auto
+    ShowShareButtons: true
+    ShowReadingTime: true
+    displayFullLangName: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    ShowToc: true
+    images: ["papermod-cover.png"]
+    profileMode:
+        enabled: false
+        title: PaperMod
+        imageUrl: "#"
+        imageTitle: my image
+        buttons:
+            - name: Archives
+              url: archives
+            - name: Tags
+              url: tags
+    homeInfoParams:
+        Title: "Welcome"
+        Content: >
+            There's not anything here yet but feel free to visit one of the links below for actual content.
+    socialIcons:
+        - name: gitlab
+          url: "https://git.xtnet.link/angel"
+        - name: github
+          url: "https://github.com/Aludus"
+        - name: email
+          url: "mailto:contact@ludi.sh"
+    editPost:
+        URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"
+        Text: "Suggest Changes"
+        appendFilePath: true
+taxonomies:
+    category: categories
+    tag: tags
+    series: series
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+privacy:
+    vimeo:
+        disabled: false
+        simple: true
+    twitter:
+        disabled: false
+        enableDNT: true
+        simple: true
+    instagram:
+        disabled: false
+        simple: true
+    youtube:
+        disabled: false
+        privacyEnhanced: true
+services:
+  instagram:
+    disableInlineCSS: true
+  twitter:
+    disableInlineCSS: true

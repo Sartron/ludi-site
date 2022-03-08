@@ -1,0 +1,16 @@
+stages:
+  - deploy
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+deploy:
+  stage: deploy
+  tags:
+    - linux-shell-prod
+  variables:
+    __DEPLOY_DIR: "ludi.sh"
+  before_script:
+    - cd "${HOME}"
+  script:
+    - mkdir -pv "${__DEPLOY_DIR}/${CI_PROJECT_NAME}_${CI_COMMIT_BRANCH}/"
+    - rsync -aPv "${CI_PROJECT_DIR}/" "${__DEPLOY_DIR}/${CI_PROJECT_NAME}_${CI_COMMIT_BRANCH}/"
