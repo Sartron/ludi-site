@@ -47,7 +47,7 @@ params:
         - name: gitlab
           url: "https://git.xtnet.link/angel"
         - name: github
-          url: "https://github.com/Aludus"
+          url: "https://github.com/Sartron"
         - name: email
           url: "mailto:contact@ludi.sh"
     editPost:
